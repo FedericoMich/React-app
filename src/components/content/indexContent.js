@@ -4,7 +4,6 @@ import "./indexContent.css"
 import { Search } from './search'
 import { Table } from './table'
 
-
 export const IndexContent = () => {
     return (
         <div className="mainContainer">
