@@ -4,4 +4,32 @@
     border-style: solid;
      margin: -3rem 1rem;
 }
+.totalContainer{
+        display: flex;
+        margin: 1rem;
+    }
+.total{
+    border: #07d484;
+    border-style: solid;
+}
 
+.content{
+    height: 9rem;
+}
+
+.pageCount{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.blueButtom{}
+
+.buttom{
+    border: blue;
+    border-style: solid;
+    float: left;
+    margin: 1rem;
+    padding: 0.3rem;
+}
