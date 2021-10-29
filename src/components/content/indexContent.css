@@ -5,8 +5,11 @@
      margin: -3rem 1rem;
 }
 .totalContainer{
-        display: flex;
-        margin: 1rem;
+    display: flex;
+    margin: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
     }
 .total{
     border: #07d484;
@@ -44,7 +47,6 @@ table {
     justify-content: center;
 }
 
-.blueButtom{}
 
 .buttom{
     border: blue;
@@ -53,4 +55,12 @@ table {
     margin: 1rem;
     padding: 0.3rem;
 }
+
+.SearchContainer{
+    border-style: solid;
+    border-color: yellow;
+    padding: 0.5rem;
+}
+
+
 
