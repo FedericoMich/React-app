@@ -1,0 +1,25 @@
+.head{
+    display: flex;
+    border: #07d484;
+    border-style: solid;
+    margin: 4rem 1rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.logoContainer{ 
+    width: 5rem;
+}
+.logo {
+    background-color: blue;
+}
+
+.navbar{
+    border: #07d484;
+    border-style: solid;
+}
+
+.item{
+    color: black;
+
+}
