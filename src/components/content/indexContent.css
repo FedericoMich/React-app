@@ -1,5 +1,5 @@
 .mainContainer{
-    height: 20rem;
+
     border: red;
     border-style: solid;
      margin: -3rem 1rem;
@@ -14,7 +14,27 @@
 }
 
 .content{
-    height: 9rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+
+.headingTable{
+    background-color: cornflowerblue;
+    height: 4rem
+
+}
+
+.contentTable{
+   height: 2rem;
+
+}
+
+table {
+    width: 95%;
 }
 
 .pageCount{
@@ -33,3 +53,4 @@
     margin: 1rem;
     padding: 0.3rem;
 }
+
