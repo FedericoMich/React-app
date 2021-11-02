@@ -13,13 +13,11 @@
 .logo {
     background-color: blue;
 }
-
 .navbar{
     border: #07d484;
     border-style: solid;
     margin-left: 30%;
 }
-
 .item{
     color: black;
     padding: 0.5rem;

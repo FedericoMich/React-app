@@ -13,6 +13,7 @@ export const IndexContent = () => {
             </div>
             <Table />
             <Buttom />
+
         </div>
     )
 }

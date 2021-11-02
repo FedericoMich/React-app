@@ -1,5 +1,4 @@
 .mainContainer{
-
     border: red;
     border-style: solid;
      margin: -3rem 1rem;
@@ -10,12 +9,11 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    }
+}
 .total{
     border: #07d484;
     border-style: solid;
 }
-
 .content{
     display: flex;
     justify-content: center;
@@ -23,31 +21,22 @@
     align-items: center;
     margin-bottom: 3rem;
 }
-
-
 .headingTable{
     background-color: cornflowerblue;
     height: 4rem
-
 }
-
 .contentTable{
    height: 2rem;
-
 }
-
 table {
     width: 95%;
 }
-
 .pageCount{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
-
-
 .buttom{
     border: blue;
     border-style: solid;
@@ -55,7 +44,6 @@ table {
     margin: 1rem;
     padding: 0.3rem;
 }
-
 .SearchContainer{
     border-style: solid;
     border-color: yellow;
