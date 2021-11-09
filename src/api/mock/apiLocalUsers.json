@@ -1,18 +1,20 @@
 {
-    "stundents": [
+    "students": [
         {
             "surname": "micca",
             "name": "Federico",
-            "login": "",
+            "login": "FedericoMich",
+
             "repos": [
                 "micca-federico-github"
-            ],
+                ],
             "class": "Full-Stack-Developer 2020/2021"
+           
         },
         {
             "surname": "Tulliani",
             "name": "Andrea",
-            "login": "",
+            "login": "andreatulliani",
             "repos": [
                 "Tulliani-andrea-github"
             ],
