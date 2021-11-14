@@ -1,22 +1,21 @@
 {
     "students": [
         {
-            "surname": "micca",
+            "surname": "Micca",
             "name": "Federico",
             "login": "FedericoMich",
-
             "repos": [
-                "micca-federico-github"
+                "https://api.github.com/repos/FedericoMich/movie_js",
+                "https://api.github.com/repos/FedericoMich/ES6"
                 ],
-            "class": "Full-Stack-Developer 2020/2021"
-           
+            "class": "Full-Stack-Developer 2020/2021" 
         },
         {
             "surname": "Tulliani",
             "name": "Andrea",
             "login": "andreatulliani",
             "repos": [
-                "Tulliani-andrea-github"
+                "https://api.github.com/repos/andreatulliani/tulliani-andrea-github"
             ],
             "class": "Full-Stack-Developer 2020/2021"
         }

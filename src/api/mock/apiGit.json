@@ -6,26 +6,6 @@
             "name":"movie_js",
             "full_name":"FedericoMich/movie_js",
             "private":true,
-            "owner":{
-               "login":"FedericoMich",
-               "id":75525835,
-               "node_id":"MDQ6VXNlcjc1NTI1ODM1",
-               "avatar_url":"https://avatars.githubusercontent.com/u/75525835?v=4",
-               "gravatar_id":"",
-               "url":"https://api.github.com/users/FedericoMich",
-               "html_url":"https://github.com/FedericoMich",
-               "followers_url":"https://api.github.com/users/FedericoMich/followers",
-               "following_url":"https://api.github.com/users/FedericoMich/following{/other_user}",
-               "gists_url":"https://api.github.com/users/FedericoMich/gists{/gist_id}",
-               "starred_url":"https://api.github.com/users/FedericoMich/starred{/owner}{/repo}",
-               "subscriptions_url":"https://api.github.com/users/FedericoMich/subscriptions",
-               "organizations_url":"https://api.github.com/users/FedericoMich/orgs",
-               "repos_url":"https://api.github.com/users/FedericoMich/repos",
-               "events_url":"https://api.github.com/users/FedericoMich/events{/privacy}",
-               "received_events_url":"https://api.github.com/users/FedericoMich/received_events",
-               "type":"User",
-               "site_admin":false
-            },
             "html_url":"https://github.com/FedericoMich/movie_js",
             "description":null,
             "fork":false,
@@ -90,22 +70,7 @@
             "open_issues_count":0,
             "license":null,
             "allow_forking":true,
-            "is_template":false,
-            "topics":[
-               
-            ],
-            "visibility":"private",
-            "forks":0,
-            "open_issues":0,
-            "watchers":0,
-            "default_branch":"master",
-            "permissions":{
-               "admin":true,
-               "maintain":true,
-               "push":true,
-               "triage":true,
-               "pull":true
-            }
+            "is_template":false
          },
          {
             "id":357522186,
@@ -113,26 +78,6 @@
             "name":"ES6",
             "full_name":"FedericoMich/ES6",
             "private":true,
-            "owner":{
-               "login":"FedericoMich",
-               "id":75525835,
-               "node_id":"MDQ6VXNlcjc1NTI1ODM1",
-               "avatar_url":"https://avatars.githubusercontent.com/u/75525835?v=4",
-               "gravatar_id":"",
-               "url":"https://api.github.com/users/FedericoMich",
-               "html_url":"https://github.com/FedericoMich",
-               "followers_url":"https://api.github.com/users/FedericoMich/followers",
-               "following_url":"https://api.github.com/users/FedericoMich/following{/other_user}",
-               "gists_url":"https://api.github.com/users/FedericoMich/gists{/gist_id}",
-               "starred_url":"https://api.github.com/users/FedericoMich/starred{/owner}{/repo}",
-               "subscriptions_url":"https://api.github.com/users/FedericoMich/subscriptions",
-               "organizations_url":"https://api.github.com/users/FedericoMich/orgs",
-               "repos_url":"https://api.github.com/users/FedericoMich/repos",
-               "events_url":"https://api.github.com/users/FedericoMich/events{/privacy}",
-               "received_events_url":"https://api.github.com/users/FedericoMich/received_events",
-               "type":"User",
-               "site_admin":false
-            },
             "html_url":"https://github.com/FedericoMich/ES6",
             "description":null,
             "fork":false,
@@ -197,22 +142,7 @@
             "open_issues_count":0,
             "license":null,
             "allow_forking":true,
-            "is_template":false,
-            "topics":[
-               
-            ],
-            "visibility":"private",
-            "forks":0,
-            "open_issues":0,
-            "watchers":0,
-            "default_branch":"master",
-            "permissions":{
-               "admin":true,
-               "maintain":true,
-               "push":true,
-               "triage":true,
-               "pull":true
-            }
+            "is_template":false
          },
          {
             "id":422492020,
@@ -220,26 +150,6 @@
             "name":"tulliani-andrea-github",
             "full_name":"andreatulliani/tulliani-andrea-github",
             "private":true,
-            "owner":{
-               "login":"andreatulliani",
-               "id":81622516,
-               "node_id":"MDQ6VXNlcjgxNjIyNTE2",
-               "avatar_url":"https://avatars.githubusercontent.com/u/81622516?v=4",
-               "gravatar_id":"",
-               "url":"https://api.github.com/users/andreatulliani",
-               "html_url":"https://github.com/andreatulliani",
-               "followers_url":"https://api.github.com/users/andreatulliani/followers",
-               "following_url":"https://api.github.com/users/andreatulliani/following{/other_user}",
-               "gists_url":"https://api.github.com/users/andreatulliani/gists{/gist_id}",
-               "starred_url":"https://api.github.com/users/andreatulliani/starred{/owner}{/repo}",
-               "subscriptions_url":"https://api.github.com/users/andreatulliani/subscriptions",
-               "organizations_url":"https://api.github.com/users/andreatulliani/orgs",
-               "repos_url":"https://api.github.com/users/andreatulliani/repos",
-               "events_url":"https://api.github.com/users/andreatulliani/events{/privacy}",
-               "received_events_url":"https://api.github.com/users/andreatulliani/received_events",
-               "type":"User",
-               "site_admin":false
-            },
             "html_url":"https://github.com/andreatulliani/tulliani-andrea-github",
             "description":"Prova1",
             "fork":false,
@@ -304,22 +214,7 @@
             "open_issues_count":0,
             "license":null,
             "allow_forking":true,
-            "is_template":false,
-            "topics":[
-               
-            ],
-            "visibility":"private",
-            "forks":0,
-            "open_issues":0,
-            "watchers":0,
-            "default_branch":"main",
-            "permissions":{
-               "admin":false,
-               "maintain":false,
-               "push":true,
-               "triage":true,
-               "pull":true
-            }
+            "is_template":false
          }
     ]
 }

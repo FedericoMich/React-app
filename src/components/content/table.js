@@ -1,9 +1,10 @@
 import React from 'react'
 import { User } from './user'
 
-export const Table = () => {
+export const TableStudents = (props) => {
 
-
+    const dataTable = props.listUser
+    const user = dataTable.map((repo) => <User key={repo.code} value={repo}/>)
     return (
         <div className="content">
             <table>
@@ -16,8 +17,9 @@ export const Table = () => {
                         <th>Totale commit</th>
                         <th>Data creazione</th>
                         <th>Ultimo aggiornamento</th>
+                        <th>Dettagli</th>
                     </tr>
-                    <User />
+                  {user}
                 </tbody>
             </table>
         </div>

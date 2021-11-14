@@ -50,5 +50,14 @@ table {
     padding: 0.5rem;
 }
 
+.detailsShow{
+    float: left;
+}
+
+.dropdownMenu{
+    border: solid 3px violet;
+    padding: 0.5rem;
+}
+
 
 
