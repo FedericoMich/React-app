@@ -1,33 +1,14 @@
-import dataGit from "./mock/apiGit.json";
-import students from "./mock/apiLocalUsers.json"
+import axios from 'axios';
 
-const merge = () => {
+export const listRepos = async () => {
+    try {
+        const response = await axios.get(
+            "https://github-funtion-ttf.azurewebsites.net/api/httpstudentsrepos"
+        );
+        return response.data && response.data.results ? response.data.results : undefined;
 
-    const studentRes = students.students;
-    const gitData = dataGit.dataGit;
-    const result = [];
-
-    studentRes.forEach(student => {
-        student.repos.forEach(repo => {
-            gitData.filter(dataGit => dataGit.url === repo).forEach(filtered => {
-                const res = {
-                    surname: student.surname,
-                    name: student.name,
-                    github_user: student.login,
-                    repo_name: filtered.name,
-                    creation_date: filtered.created_at,
-                    last_update: filtered.updated_at,
-                };
-                result.push(res);
-            })
-        })
-    })
-    return result;
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
 }
-const listRepos = () => {
-    const DataObj = []
-    merge().forEach(element => DataObj.push(element))
-    return DataObj;
-}
-
-export default listRepos;

@@ -5,44 +5,34 @@ export const User = (props) => {
     const [visible, setVisible] = useState(false)
     const [color, setColor] = useState('');
 
-    function handleColor() {
-        if (color === "") {
-            { setColor('#ceebf1') }
-        }
-        else { setColor("") }
+    const handleColor = () => {
+        if (color === "" ? setColor('#ceebf1') : setColor(""));
     }
-    function handleDetails() {
-        if (visible === false) {
-            setVisible(true)
-        }
-        else { setVisible(false) }
-    }
-    function handleCloseDetails() {
-        { setVisible(false) }
+    const handleDetails = () => {
+        if (!visible) { setVisible(true) } else { setVisible(false) }
+        handleColor();
     }
 
     return (
         <>
-            <tr style={{ background: color }} className="contentTable" onClick={() => handleColor()}>
+            <tr style={{ background: color }} className="contentTable" onClick={() => handleDetails()}>
                 <td>{props.value.surname}</td>
                 <td>{props.value.name}</td>
-                <td>{props.value.github_user}</td>
-                <td>{props.value.repo_name}</td>
-                <td>6</td>
-                <td>{props.value.creation_date}</td>
-                <td>{props.value.last_update}</td>
-                <td><button onClick={() => handleDetails()}>Dettagli</button></td>
+                <td>{props.value.login}</td>
+                <td>{props.value.repoName}</td>
+                <td>3</td>
+                <td>{props.value.creationDate}</td>
+                <td>{props.value.lastUpdate}</td>
             </tr>
 
-            {visible && <tr className="contentTable">
-                <td>{props.value.surname}</td>
+            {visible && <tr className="contentTableDetails">
+            <td>{props.value.surname}</td>
                 <td>{props.value.name}</td>
-                <td>{props.value.github_user}</td>
-                <td>{props.value.repo_name}</td>
-                <td>6</td>
-                <td>{props.value.creation_date}</td>
-                <td>{props.value.last_update}</td>
-                <button onClick={() => handleCloseDetails()}>close</button>
+                <td>{props.value.login}</td>
+                <td>{props.value.repoName}</td>
+                <td>3</td>
+                <td>{props.value.creationDate}</td>
+                <td>{props.value.lastUpdate}</td>
             </tr>}
         </>
     )
