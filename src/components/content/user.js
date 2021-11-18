@@ -1,4 +1,6 @@
+
 import React, { useState } from 'react'
+import { DateTime } from 'luxon';
 
 export const User = (props) => {
 
@@ -13,6 +15,16 @@ export const User = (props) => {
         handleColor();
     }
 
+    const currentDate = props.value.creationDate
+    const lastUpdate = props.value.lastUpdate
+
+    const date = DateTime.fromISO(currentDate)
+    const humanReadableCreation = date.toLocaleString(DateTime.DATETIME_MED);
+
+    const date2 = DateTime.fromISO(lastUpdate)
+    const humanReadableUpdate = date2.toLocaleString(DateTime.DATETIME_MED);
+
+
     return (
         <>
             <tr style={{ background: color }} className="contentTable" onClick={() => handleDetails()}>
@@ -21,18 +33,18 @@ export const User = (props) => {
                 <td>{props.value.login}</td>
                 <td>{props.value.repoName}</td>
                 <td>3</td>
-                <td>{props.value.creationDate}</td>
-                <td>{props.value.lastUpdate}</td>
+                <td>{humanReadableCreation}</td>
+                <td>{humanReadableUpdate}</td>
             </tr>
 
             {visible && <tr className="contentTableDetails">
-            <td>{props.value.surname}</td>
+                <td>{props.value.surname}</td>
                 <td>{props.value.name}</td>
                 <td>{props.value.login}</td>
                 <td>{props.value.repoName}</td>
                 <td>3</td>
-                <td>{props.value.creationDate}</td>
-                <td>{props.value.lastUpdate}</td>
+                <td>{humanReadableCreation}</td>
+                <td>{humanReadableUpdate}</td>
             </tr>}
         </>
     )

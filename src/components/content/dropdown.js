@@ -3,7 +3,7 @@ import React from 'react'
 export const DropdownFilter = () => {
     return (
         <div className="dropdownMenu">
-            <p for="class"><b>Choose a class:</b></p>
+            <p className="classChose"><b>Choose a class:</b></p>
             <select name="class">
                 <option value="">Fullstack Developer with Cloud Technologies </option>
                 <option value="">Cloud Administrator e Security Engineer</option>

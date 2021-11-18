@@ -16,6 +16,7 @@
 }
 .content{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -64,6 +65,12 @@ table {
 
 .minusButtonLogo{
     width: 3rem;
+    margin: 0% 20%;
 }
 
+
+.tableButton {
+    padding: 0.5rem;
+    justify-items: center;
+}
 

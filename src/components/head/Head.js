@@ -9,7 +9,6 @@ export const Head = () => {
             </div>
             <div className="navbar">
                 <a href="/" className="item">Visualizza repos</a>
-                <a href="/" className="item">Aggiorna repos</a>
                 <a href="/" className="item">Nuovo utente</a>
             </div>
         </div>

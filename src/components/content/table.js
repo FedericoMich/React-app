@@ -4,9 +4,10 @@ import { User } from './user'
 export const TableStudents = (props) => {
 
     const dataTable = props.listUser
-    const user = dataTable.map((repo) => <User key={repo.idRepo} value={repo}/>)
+    const user = dataTable.map((repo) => <User key={repo.idRepo} value={repo} />)
     return (
         <div className="content">
+           
             <table>
                 <tbody>
                     <tr className="headingTable">
@@ -18,7 +19,7 @@ export const TableStudents = (props) => {
                         <th>Data creazione</th>
                         <th>Ultimo aggiornamento</th>
                     </tr>
-                  {user}
+                    {user}
                 </tbody>
             </table>
         </div>
