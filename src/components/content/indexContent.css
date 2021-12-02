@@ -1,5 +1,11 @@
+:root {
+    --color1:#14123E;
+    --color2:#008491;
+    --color3:#CBE8EC;
+  }
+
 .mainContainer{
-    border: red;
+    
     border-style: solid;
 }
 .totalContainer{

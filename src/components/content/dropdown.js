@@ -1,15 +1,34 @@
-import React from 'react'
+import * as React from 'react';
+import TextField from '@mui/material/TextField';
+import Stack from '@mui/material/Stack';
+import Autocomplete from '@mui/material/Autocomplete';
 
 export const DropdownFilter = () => {
     return (
-        <div className="dropdownMenu">
-            <p className="classChose"><b>Choose a class:</b></p>
-            <select name="class">
-                <option value="">Fullstack Developer with Cloud Technologies </option>
-                <option value="">Cloud Administrator e Security Engineer</option>
-                <option value="">Big Data Engineer e Solutions Architect</option>
-                <option value="">Fullstack 4 Digital Marketing</option>
-            </select>
-        </div>
-    )
-}
+      <Stack spacing={2} sx={{ width: 300 }}>
+        <Autocomplete
+          freeSolo
+          id="free-solo-2-demo"
+          disableClearable
+          options={classList.map((option) => option.className)}
+          renderInput={(params) => (
+            <TextField
+              {...params}
+              label="Selezione la classe"
+              InputProps={{
+                ...params.InputProps,
+                type: 'search',
+              }}
+            />
+          )}
+        />
+      </Stack>
+    );
+  }
+
+  const classList = [
+    { className: 'Fullstack Developer with Cloud Technologies '},
+    { className: 'Cloud Administrator e Security Engineer'},
+    { className: 'Big Data Engineer e Solutions Architect'},
+    { className: 'Fullstack 4 Digital Marketing'},
+  ];
