@@ -20,27 +20,25 @@ export const IndexContent = () => {
     const handelUpdate = async () => {
         setRepos(await listRepos())
     }
-
     const handelCollapse = () => {
         setRepos(undefined)
     }
 
+    
     return (
-        <>
-            <div className="mainContainer">
-                <div className="totalContainer">
-                    {repos && (<h4 className="total">Totale repos: {repos.length}</h4>)}
-                    <DropdownFilter />
-                    <Search />
-                </div>
-                <div className="tableButton">
-                    <img className="minusButtonLogo" alt="/" src={refreshIcon} onClick={() => handelUpdate()} />
-                    <img className="minusButtonLogo" alt="/" src={minusLogo} onClick={() => handelCollapse()} />
-                </div>
-                {repos && (<TableStudents listUser={repos} />
-                )
-                }
+        <div className="mainContainer">
+            <div className="totalContainer">
+                <h4 className="total">Totale repos: {repos && (repos.length)}</h4>
+                <DropdownFilter />
+                <Search />
             </div>
-        </>
+            <div className="tableButton">
+                <img className="minusButtonLogo" alt="/" src={refreshIcon} onClick={() => handelUpdate()} />
+                <img className="minusButtonLogo" alt="/" src={minusLogo} onClick={() => handelCollapse()} />
+            </div>
+            {repos && (<TableStudents listUser={repos} />
+            )
+            }
+        </div>
     )
 }

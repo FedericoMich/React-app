@@ -1,7 +1,6 @@
 .mainContainer{
     border: red;
     border-style: solid;
-     margin: -3rem 1rem;
 }
 .totalContainer{
     display: flex;
