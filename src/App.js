@@ -2,6 +2,7 @@ import './App.css';
 import { Head } from './components/head/Head';
 import { IndexContent } from './components/content/indexContent';
 
+
 function App() {
 
   return (

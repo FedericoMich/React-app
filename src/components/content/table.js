@@ -1,27 +1,39 @@
-import React from 'react'
+import * as React from 'react';
 import { User } from './user'
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
 
-export const TableStudents = (props) => {
-
+export function TableStudents(props) {
     const dataTable = props.listUser
-    const user = dataTable.map((repo) => <User key={repo.idRepo} value={repo} />)
+    const myuser = dataTable.map((row) => (
+        <User key={row.idRepo} value={row} />
+    ))
+
     return (
-        <div className="content">
-           
-            <table>
-                <tbody>
-                    <tr className="headingTable">
-                        <th>Cognome</th>
-                        <th>Nome</th>
-                        <th>Utente githb</th>
-                        <th>Nome repo</th>
-                        <th>Totale commit</th>
-                        <th>Data creazione</th>
-                        <th>Ultimo aggiornamento</th>
-                    </tr>
-                    {user}
-                </tbody>
-            </table>
-        </div>
-    )
+        <TableContainer component={Paper}>
+            <Table aria-label="collapsible table">
+                <TableHead>
+                    <TableRow>
+                        <TableCell />
+                        <TableCell>Cognome</TableCell>
+                        <TableCell>Nome</TableCell>
+                        <TableCell>Utente githb</TableCell>
+                        <TableCell>Nome repo</TableCell>
+                        <TableCell>Totale commit</TableCell>
+                        <TableCell>Data creazione</TableCell>
+                        <TableCell>Ultimo aggiornamento</TableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
+                    {myuser}
+                </TableBody>
+            </Table>
+        </TableContainer>
+    );
 }
+

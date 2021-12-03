@@ -6,6 +6,8 @@ import { listRepos } from "../../api/repos"
 import { DropdownFilter } from './dropdown'
 import minusLogo from '../../images/minus_button.png'
 import refreshIcon from '../../images/refreshIcon.png'
+import Divider from '@mui/material/Divider';
+import Logo from '../../images/logo.png'
 
 export const IndexContent = () => {
     const [repos, setRepos] = useState(undefined);
@@ -24,7 +26,7 @@ export const IndexContent = () => {
         setRepos(undefined)
     }
 
-    
+
     return (
         <div className="mainContainer">
             <div className="totalContainer">
@@ -36,6 +38,9 @@ export const IndexContent = () => {
                 <img className="minusButtonLogo" alt="/" src={refreshIcon} onClick={() => handelUpdate()} />
                 <img className="minusButtonLogo" alt="/" src={minusLogo} onClick={() => handelCollapse()} />
             </div>
+            <Divider>
+            <img className="LogoGitClassDivider" alt="/" src={Logo}/>
+            </Divider>
             {repos && (<TableStudents listUser={repos} />
             )
             }
