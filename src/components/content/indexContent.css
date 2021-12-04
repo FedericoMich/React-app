@@ -1,12 +1,6 @@
-:root {
-    --color1:#14123E;
-    --color2:#008491;
-    --color3:#CBE8EC;
-  }
 
 .mainContainer{
     max-width: 1500px;
-    text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
@@ -17,58 +11,11 @@
     align-items: center;
     flex-direction: row;
 }
-.total{
-    border: #07d484;
-    border-style: solid;
-}
-.content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    margin-bottom: 3rem;
-}
-.headingTable{
-    background-color: cornflowerblue;
-    height: 4rem
-}
-.contentTable{
-   height: 2rem;
-}
-.contentTableDetails{
-    background-color: #c8c8c857
-}
-table {
-    width: 95%;
-}
-.pageCount{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-.buttom{
-    border: blue;
-    border-style: solid;
-    float: left;
-    margin: 1rem;
-    padding: 0.3rem;
-}
+
 .SearchContainer{
-    border-style: solid;
-    border-color: yellow;
     padding: 0.5rem;
 }
 
-.detailsShow{
-    float: left;
-}
-
-.dropdownMenu{
-    border: solid 3px violet;
-    padding: 0.5rem;
-}
 
 .minusButtonLogo{
     width: 3rem;
@@ -76,13 +23,8 @@ table {
 }
 
 
-.tableButton {
-    padding: 0.5rem;
-    justify-items: center;
-}
-
 .LogoGitClassDivider{
-    width: 3rem;
+    width: 4rem;
     margin: 2rem;
 }
 
