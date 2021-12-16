@@ -10,6 +10,7 @@ export const DropdownFilter = () => {
           freeSolo
           id="free-solo-2-demo"
           disableClearable
+          
           options={classList.map((option) => option.className)}
           renderInput={(params) => (
             <TextField

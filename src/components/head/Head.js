@@ -12,10 +12,56 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Logo from '../../images/logo.png'
+import SearchIcon from '@mui/icons-material/Search';
+import { styled, alpha } from '@mui/material/styles';
+import InputBase from '@mui/material/InputBase';
+
 import "./head.css"
 
 const pages = ['Visualizza repos', 'Nuovo utente'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
+const Search = styled('div')(({ theme }) => ({
+    position: 'relative',
+    borderRadius: theme.shape.borderRadius,
+    backgroundColor: alpha(theme.palette.common.white, 0.15),
+    '&:hover': {
+      backgroundColor: alpha(theme.palette.common.white, 0.25),
+    },
+    marginLeft: 0,
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: theme.spacing(1),
+      width: 'auto',
+    },
+  }));
+  
+  const SearchIconWrapper = styled('div')(({ theme }) => ({
+    padding: theme.spacing(0, 2),
+    height: '100%',
+    position: 'absolute',
+    pointerEvents: 'none',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }));
+
+  const StyledInputBase = styled(InputBase)(({ theme }) => ({
+    color: 'inherit',
+    '& .MuiInputBase-input': {
+      padding: theme.spacing(1, 1, 1, 0),
+      // vertical padding + font size from searchIcon
+      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+      transition: theme.transitions.create('width'),
+      width: '100%',
+      [theme.breakpoints.up('sm')]: {
+        width: '12ch',
+        '&:focus': {
+          width: '20ch',
+        },
+      },
+    },
+  }));
 
 
 export const Head = () => {
@@ -40,7 +86,7 @@ export const Head = () => {
     return (
         <AppBar position="static">
             <Container maxWidth="xl">
-                <Toolbar disableGutters claassName="test14">
+                <Toolbar disableGutters>
                     <Typography
                         variant="h6"
                         noWrap
@@ -48,7 +94,7 @@ export const Head = () => {
                         sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}>
                         <img className="LogoGitClass" alt="/" src={Logo} />
                     </Typography>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }}}>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size="large"
                             aria-label="account of current user"
@@ -63,19 +109,31 @@ export const Head = () => {
                             anchorEl={anchorElNav}
                             anchorOrigin={{
                                 vertical: 'bottom',
-                                horizontal: 'left',}}
+                                horizontal: 'left',
+                            }}
                             keepMounted
                             transformOrigin={{
                                 vertical: 'top',
-                                horizontal: 'left',}}
+                                horizontal: 'left',
+                            }}
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
-                            sx={{display: { xs: 'block', md: 'none' },}}>
+                            sx={{ display: { xs: 'block', md: 'none' }, }}>
                             {pages.map((page) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                                     <Typography textAlign="center">{page}</Typography>
                                 </MenuItem>))}
+                                <Search>
+                            <SearchIconWrapper>
+                                <SearchIcon />
+                            </SearchIconWrapper>
+                            <StyledInputBase
+                                placeholder="Cerca..."
+                                inputProps={{ 'aria-label': 'search' }}
+                            />
+                        </Search>
                         </Menu>
+                      
                     </Box>
                     <Typography
                         variant="h6"
@@ -83,7 +141,17 @@ export const Head = () => {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                     </Typography>
+                   
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                    <Search>
+                            <SearchIconWrapper>
+                                <SearchIcon />
+                            </SearchIconWrapper>
+                            <StyledInputBase
+                                placeholder="Cerca..."
+                                inputProps={{ 'aria-label': 'search' }}
+                            />
+                        </Search>
                         {pages.map((page) => (
                             <Button
                                 key={page}
@@ -91,12 +159,14 @@ export const Head = () => {
                                 sx={{ my: 2, color: 'white', display: 'block' }}>
                                 {page}
                             </Button>
+                            
                         ))}
+                        
                     </Box>
                     <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar alt="Fede" src="/static/images/avatar/2.jpg" />
+                                <Avatar alt="F" src="/static/images/avatar/2.jpg" />
                             </IconButton>
                         </Tooltip>
                         <Menu
@@ -105,11 +175,13 @@ export const Head = () => {
                             anchorEl={anchorElUser}
                             anchorOrigin={{
                                 vertical: 'top',
-                                horizontal: 'right',}}
+                                horizontal: 'right',
+                            }}
                             keepMounted
                             transformOrigin={{
                                 vertical: 'top',
-                                horizontal: 'right',}}
+                                horizontal: 'right',
+                            }}
                             open={Boolean(anchorElUser)}
                             onClose={handleCloseUserMenu}>
                             {settings.map((setting) => (

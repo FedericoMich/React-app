@@ -5,11 +5,26 @@
 
 @media (min-width: 900px) {
     .MuiBox-root {
-        
+
         justify-content: flex-end
     }
 }
-css-2uchni{
+
+css-2uchni {
     margin-left: 5rem;
 }
 
+.css-hip9hq-MuiPaper-root-MuiAppBar-root {
+    background-color: var(--color1) !important;
+}
+
+.css-1q39md6-MuiButtonBase-root-MuiButton-root {
+    margin-right: 2rem !important;
+    margin-left: 2rem !important;
+    color: var(--fontcolor2) !important;
+}
+
+.css-1orzy9s {
+    margin-top: 0.75rem;
+    height: 2.5rem;
+}

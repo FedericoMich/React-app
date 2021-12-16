@@ -4,10 +4,10 @@
     margin-left: auto;
     margin-right: auto;
 }
-.totalContainer{
+.totalContainer {
     display: flex;
     margin: 1rem;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
 }
@@ -26,5 +26,10 @@
 .LogoGitClassDivider{
     width: 4rem;
     margin: 2rem;
+}
+
+.total{
+    margin: 3rem;
+    color: var(--fontcolor1);
 }
 

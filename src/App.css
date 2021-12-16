@@ -2,16 +2,20 @@
 
 :root {
     --mainFont:'B612 Mono', monospace;
-    --color1:#1A1A2E;
-    --color2:#16213E;
-    --color3:#0F3460;
-    --color4:#E94560;
-
+    /*################################*/
+    --fontcolor1:black;
+    --fontcolor2:whitesmoke;
+    /*################################*/
+    --color1:#0d2137;
+    --color2:#2E77AE;
+    --color3:#E0EAF5;
+    --color4:#FF8E2B;
   }
 
 .App{
   font-family: var(--mainFont)!important;
-  background-color: var(--color1);
+  background-color: var(--color3);
   color: whitesmoke;
   padding-bottom: 8rem;
+
 }

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import "./indexContent.css"
-import { Search } from './search'
 import { TableStudents } from './table'
 import { listRepos } from "../../api/repos"
 import { DropdownFilter } from './dropdown'
@@ -32,9 +31,9 @@ export const IndexContent = () => {
             <div className="totalContainer">
                 <h4 className="total">Totale repos: {repos && (repos.length)}</h4>
                 <DropdownFilter />
-                <Search />
             </div>
             <div className="tableButton">
+                
                 <img className="minusButtonLogo" alt="/" src={refreshIcon} onClick={() => handelUpdate()} />
                 <img className="minusButtonLogo" alt="/" src={minusLogo} onClick={() => handelCollapse()} />
             </div>
