@@ -15,25 +15,27 @@ export function TableStudents(props) {
     ))
 
     return (
-        <TableContainer component={Paper}>
-            <Table aria-label="collapsible table">
-                <TableHead>
-                    <TableRow>
-                        <TableCell />
-                        <TableCell>Cognome</TableCell>
-                        <TableCell>Nome</TableCell>
-                        <TableCell>Utente githb</TableCell>
-                        <TableCell>Nome repo</TableCell>
-                        <TableCell>Totale commit</TableCell>
-                        <TableCell>Data creazione</TableCell>
-                        <TableCell>Ultimo aggiornamento</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {myuser}
-                </TableBody>
-            </Table>
-        </TableContainer>
+        <div className='tableContainer'>
+            <TableContainer component={Paper}>
+                <Table aria-label="collapsible table">
+                    <TableHead>
+                        <TableRow>
+                            <TableCell />
+                            <TableCell>Cognome</TableCell>
+                            <TableCell>Nome</TableCell>
+                            <TableCell>Utente githb</TableCell>
+                            <TableCell>Nome repo</TableCell>
+                            <TableCell>Totale commit</TableCell>
+                            <TableCell>Data creazione</TableCell>
+                            <TableCell>Ultimo aggiornamento</TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        {myuser}
+                    </TableBody>
+                </Table>
+            </TableContainer>
+        </div>
     );
 }
 

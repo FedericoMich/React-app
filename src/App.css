@@ -1,19 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=B612+Mono&display=swap');
 
-:root {
-    --mainFont:'B612 Mono', monospace;
-    /*################################*/
-    --fontcolor1:black;
-    --fontcolor2:whitesmoke;
-    /*################################*/
-    --color1:#0d2137;
-    --color2:#2E77AE;
-    --color3:#E0EAF5;
-    --color4:#FF8E2B;
-  }
+body {
+  padding-right: 0 !important
+}
 
-.App{
-  font-family: var(--mainFont)!important;
+:root {
+  --mainFont: 'B612 Mono', monospace;
+  /*################################*/
+  --fontcolor1: black;
+  --fontcolor2: whitesmoke;
+  /*################################*/
+  --color1: #0d2137;
+  --color2: #2E77AE;
+  --color3: #E0EAF5;
+  --color4: #FF8E2B;
+}
+
+.App {
+  font-family: var(--mainFont) !important;
   background-color: var(--color3);
   color: whitesmoke;
   padding-bottom: 8rem;

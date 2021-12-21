@@ -5,6 +5,7 @@ import Autocomplete from '@mui/material/Autocomplete';
 
 export const DropdownFilter = () => {
     return (
+      <div className='DropdownContainer'>
       <Stack spacing={2} sx={{ width: 300 }}>
         <Autocomplete
           freeSolo
@@ -13,9 +14,9 @@ export const DropdownFilter = () => {
           
           options={classList.map((option) => option.className)}
           renderInput={(params) => (
-            <TextField
+            <TextField 
               {...params}
-              label="Selezione la classe"
+              label="Seleziona classe"
               InputProps={{
                 ...params.InputProps,
                 type: 'search',
@@ -24,6 +25,7 @@ export const DropdownFilter = () => {
           )}
         />
       </Stack>
+      </div>
     );
   }
 

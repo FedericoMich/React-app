@@ -1,35 +1,60 @@
-
-.mainContainer{
+.mainContainer {
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
 }
+
 .totalContainer {
-    display: flex;
     margin: 1rem;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    padding: 1rem;
+    background-color: var(--color4);
+    border-radius: 30px;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
 }
 
-.SearchContainer{
+.SearchContainer {
     padding: 0.5rem;
 }
 
 
-.minusButtonLogo{
+.minusButtonLogo {
     width: 3rem;
     margin: 0% 20%;
 }
 
 
-.LogoGitClassDivider{
+.LogoGitClassDivider {
     width: 4rem;
     margin: 2rem;
 }
 
-.total{
-    margin: 3rem;
-    color: var(--fontcolor1);
+.total {
+    color: var(--color1);
+    margin: 1rem;
+    text-align: center;
+
 }
 
+.DropdownContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.tableContainer {
+    padding: 1rem;
+}
+
+.tableButton {
+    border: transparent !important;
+    color: var(--color1) !important;
+    text-align: center;
+
+}
+
+@media only screen and (max-width: 900px) {
+
+    .tableContainer {
+        padding: 0rem;
+    }
+}

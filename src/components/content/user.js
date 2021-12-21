@@ -62,7 +62,7 @@ export const User = (props) => {
             <TableRow>
                 <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={8}>
                     <Collapse in={open} timeout="auto" unmountOnExit>
-                        <Box sx={{ height: 330, padding:5, transform: 'translateZ(0px)', flexGrow: 1 }}>
+                        <Box sx={{ height: 330, padding: 5, transform: 'translateZ(0px)', flexGrow: 1 }}>
                             <Table size="small" aria-label="purchases">
 
                                 <TableRow>
@@ -84,8 +84,8 @@ export const User = (props) => {
                                                 onClick={handleClose} />))}
 
                                     </SpeedDial>
-                                    </TableRow>
-                                
+                                </TableRow>
+
                                 <TableRow>
                                     <TableCell>{props.value.surname}</TableCell>
                                 </TableRow>
@@ -105,7 +105,7 @@ export const User = (props) => {
                                 <TableRow>
                                     <TableCell>{humanReadableUpdate}</TableCell>
                                 </TableRow>
-                                
+
                             </Table>
                         </Box>
                     </Collapse>
