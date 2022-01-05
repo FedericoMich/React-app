@@ -4,6 +4,7 @@ import FindReplaceIcon from '@mui/icons-material/FindReplace';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import CircularProgress from '@mui/material/CircularProgress';
 
 
 export const HeaderContent = (props) => {
@@ -13,7 +14,7 @@ export const HeaderContent = (props) => {
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={3}>
                     <Grid item xs>
-                        <h4 className="total">Totale repos: {props.repos && (props.repos.length)}</h4>
+                            <h4 className="total">Totale repos: {!props.loading ? (props.repos.length) : <CircularProgress color="inherit"/>}</h4>
                     </Grid>
                     <Grid item xs>
                         <DropdownFilter />
@@ -25,7 +26,8 @@ export const HeaderContent = (props) => {
                                 color: "#0d2137",
                                 borderColor: "#0d2137",
                                 padding: "12px 30px",
-                                fontSize: "16px"}}
+                                fontSize: "16px"
+                            }}
                                 variant="outlined" onClick={() => props.handelUpdate()} startIcon={<FindReplaceIcon />}>
                                 Refresh
                             </Button>

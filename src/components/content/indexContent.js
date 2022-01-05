@@ -30,17 +30,16 @@ export const IndexContent = () => {
         for (let i = 0; i < 15; i++) {
             content.push(
                 <div className="nothingToShow">
-                    <Skeleton animation="pulse" variant="rectangular" width={1500} height={40} style={{ 'borderRadius': '20px', 'marginBottom': '15px' }} />
+                    <Skeleton animation="pulse" variant="rectangular" width={1400} height={40} style={{ 'borderRadius': '17px','margin': '10px' }} />
                 </div>
             )
         }
         return content;
     }
 
-
     return (
         <div className="mainContainer">
-            <HeaderContent repos={repos} handelUpdate={handelUpdate} />
+            <HeaderContent repos={repos} handelUpdate={handelUpdate} loading={loading}/>)
             <Divider><img className="LogoGitClassDivider" alt="LogoGitClass" src={LogoBlack} /></Divider>
             {loading && loopskeleton()}
             {repos && (<TableStudents listUser={repos} />)}

@@ -31,10 +31,12 @@
 }
 
 .total {
+    display: flex;
+    height: 3.5rem;
     color: var(--color1);
-    margin: 1rem;
     text-align: center;
-
+    align-items: center;
+    justify-content: center;
 }
 
 .DropdownContainer {
@@ -45,6 +47,11 @@
 .tableContainer {
     padding: 1rem;
 }
+@media only screen and (max-width: 900px) {
+    .tableContainer {
+        padding: 0rem;
+    }
+}
 
 .tableButton {
     border: transparent !important;
@@ -53,9 +60,9 @@
 
 }
 
-@media only screen and (max-width: 900px) {
+.nothingToShow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 
-    .tableContainer {
-        padding: 0rem;
-    }
 }
