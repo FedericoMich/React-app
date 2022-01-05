@@ -144,7 +144,7 @@ export const Head = () => {
                             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         </Typography>
 
-                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>                          
+                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                             <div className="navbarButtonContainer">
                                 {pages.map((page) => (
                                     <Button
@@ -172,7 +172,7 @@ export const Head = () => {
                         <Box sx={{ flexGrow: 0 }}>
                             <Tooltip title="Open settings">
                                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                    <Avatar alt="F" src="/static/images/avatar/2.jpg" />
+                                    <Avatar alt="F" src="/static/images/avatar/1.jpg" />
                                 </IconButton>
                             </Tooltip>
                             <Menu

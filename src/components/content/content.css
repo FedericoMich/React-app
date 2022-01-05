@@ -1,10 +1,11 @@
 .mainContainer {
+    min-width: 300px;
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.totalContainer {
+.HeaderContentContainer {
     margin: 1rem;
     padding: 1rem;
     background-color: var(--color4);
