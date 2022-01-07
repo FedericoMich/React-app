@@ -39,7 +39,7 @@ export const IndexContent = () => {
 
     return (
         <div className="mainContainer">
-            <HeaderContent repos={repos} handelUpdate={handelUpdate} loading={loading} />)
+            <HeaderContent repos={repos} handelUpdate={handelUpdate} loading={loading} />
             <Divider><img className="LogoGitClassDivider" alt="LogoGitClass" src={LogoBlack} /></Divider>
             {loading && loopskeleton()}
             {repos && !loading && (<TableStudents listUser={repos} />)}

@@ -41,7 +41,7 @@ export const User = (props) => {
     const handleClose = () => setOpenMore(false);
 
     return (
-        <React.Fragment>
+        <>
             <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
                 <TableCell>
                     <IconButton
@@ -105,12 +105,11 @@ export const User = (props) => {
                                 <TableRow>
                                     <TableCell>{humanReadableUpdate}</TableCell>
                                 </TableRow>
-
                             </Table>
                         </Box>
                     </Collapse>
                 </TableCell>
             </TableRow>
-        </React.Fragment>
+        </>
     );
 }
