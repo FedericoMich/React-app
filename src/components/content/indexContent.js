@@ -30,7 +30,7 @@ export const IndexContent = () => {
         for (let i = 0; i < 15; i++) {
             content.push(
                 <div className="nothingToShow">
-                    <Skeleton animation="pulse" variant="rectangular" width={1400} height={40} style={{ 'borderRadius': '17px','margin': '10px' }} />
+                    <Skeleton animation="pulse" variant="rectangular" width={1400} height={40} style={{ 'borderRadius': '17px', 'margin': '10px' }} />
                 </div>
             )
         }
@@ -39,10 +39,10 @@ export const IndexContent = () => {
 
     return (
         <div className="mainContainer">
-            <HeaderContent repos={repos} handelUpdate={handelUpdate} loading={loading}/>)
+            <HeaderContent repos={repos} handelUpdate={handelUpdate} loading={loading} />)
             <Divider><img className="LogoGitClassDivider" alt="LogoGitClass" src={LogoBlack} /></Divider>
             {loading && loopskeleton()}
-            {repos && (<TableStudents listUser={repos} />)}
+            {repos && !loading && (<TableStudents listUser={repos} />)}
         </div>
     )
 }
