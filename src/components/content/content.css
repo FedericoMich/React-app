@@ -66,3 +66,11 @@
     justify-content: center;
 
 }
+
+.errorContainer{
+    width: 100%;
+    text-align: center;
+}
+.error{
+    color: var(--color1);
+}

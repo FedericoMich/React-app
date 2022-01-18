@@ -13,13 +13,7 @@ export const HeaderContent = (props) => {
         <div className="HeaderContentContainer">
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={3}>
-                    <Grid item xs>
-                            <h4 className="total">Totale repos: {!props.loading ? (props.repos.length) : <CircularProgress color="inherit"/>}</h4>
-                    </Grid>
-                    <Grid item xs>
-                        <DropdownFilter />
-                    </Grid>
-                    <Grid item xs>
+                <Grid item xs>
                         <div className="tableButton">
                             <Button style={{
                                 borderRadius: 35,
@@ -33,6 +27,13 @@ export const HeaderContent = (props) => {
                             </Button>
                         </div>
                     </Grid>
+                    <Grid item xs>
+                        <DropdownFilter />
+                    </Grid>
+                    <Grid item xs>
+                            <h4 className="total">Totale repos: {!props.loading ? (props.repos.length) : <CircularProgress color="inherit"/>}</h4>
+                    </Grid>
+                   
                 </Grid>
             </Box>
         </div>
