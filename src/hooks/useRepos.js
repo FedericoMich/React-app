@@ -20,5 +20,17 @@ export const useRepos = () => {
         populate()
     }, [])
 
-    return { repos, setRepos, loading, setLoading, onError };
+    const handelUpdate = async () => {
+        setLoading(true)
+        try {
+            setRepos(await listRepos())
+            setLoading(false)
+        } catch (err) {
+            setOnError(true);
+            setLoading(false)
+        }
+    }
+
+  
+    return { repos, loading, onError, handelUpdate };
 }

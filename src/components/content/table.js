@@ -10,10 +10,12 @@ import Paper from '@mui/material/Paper';
 
 export function TableStudents(props) {
     const dataTable = props.listUser
-    const myuser = dataTable.map((row) => (
-        <User key={row.idRepo} value={row} />
-    ))
+    console.log(dataTable)
 
+    const myuser = dataTable.map((row) => (
+        <User value={row} key={row.idRepo} />
+    ))
+    
     return (
         <div className='tableContainer'>
             <TableContainer component={Paper}>
