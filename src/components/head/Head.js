@@ -15,11 +15,10 @@ import LogoWhite from '../../images/logowhite.png'
 import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
-
 import "./head.css"
 
 const pages = ['Visualizza repos', 'Nuovo utente'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = ['Logout'];
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -83,6 +82,11 @@ export const Head = () => {
         setAnchorElUser(null);
     };
 
+    function onChange(e){
+        const change = (e.target.value)
+        console.log(change)
+    }
+
     return (
 
         <AppBar position="static">
@@ -131,7 +135,7 @@ export const Head = () => {
                                     </SearchIconWrapper>
                                     <StyledInputBase
                                         placeholder="Cerca..."
-                                        inputProps={{ 'aria-label': 'search' }}
+                                        onChange={onChange}
                                     />
                                 </Search>
                             </Menu>
@@ -163,7 +167,7 @@ export const Head = () => {
                                     </SearchIconWrapper>
                                     <StyledInputBase
                                         placeholder="Cerca..."
-                                        inputProps={{ 'aria-label': 'search' }}
+                                        onChange={onChange}
                                     />
                                 </Search>
                             </div>
