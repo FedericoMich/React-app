@@ -25,7 +25,7 @@ const actions = [
 ];
 
 
-export const User = (props) => {
+export const TableContentRow = (props) => {
     const currentDate = props.value.creationDate
     const lastUpdate = props.value.lastUpdate
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { User } from './user'
+import { TableContentRow } from './TableContentRow'
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -12,7 +12,7 @@ export function TableStudents(props) {
     const dataTable = props.listUser
 
     const myuser = dataTable.map((row) => (
-        <User value={row} key={row.idRepo} />
+        <TableContentRow value={row} key={row.idRepo} />
     ))
     
     return (

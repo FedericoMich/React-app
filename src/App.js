@@ -1,6 +1,6 @@
 import './App.css';
-import { Head } from './components/head/Head';
-import { IndexContent } from './components/content/indexContent';
+import { Outlet} from "react-router-dom";
+import {Head } from './layout/head/Head'
 
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Head/>
-      <IndexContent/>
+      <Outlet />
     </div>
   );
 }

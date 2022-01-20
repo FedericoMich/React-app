@@ -16,10 +16,14 @@ import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import "./head.css"
+import { Link } from "react-router-dom";
 
-const pages = ['Visualizza repos', 'Nuovo utente'];
-const settings = ['Logout'];
 
+const pages = ['Visualizza repos', 'Nuovo utente ', <Link to="/repos">Repos</Link>];
+const settings = [<Link to="/logout">logout</Link>, <Link to="/login">Login</Link>, <Link to="/users">Users</Link>,  <Link to="/classes">Classes</Link>];
+                           
+                           
+                          
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -82,7 +86,7 @@ export const Head = () => {
         setAnchorElUser(null);
     };
 
-    function onChange(e){
+    function onChange(e) {
         const change = (e.target.value)
         console.log(change)
     }
