@@ -8,7 +8,7 @@ export const User = () => {
                 <h2>user</h2>
             </div>
             <div>
-                <Link to="/user">user</Link>
+                <Link to="/">back to home</Link>
             </div>
         </>
     ) 

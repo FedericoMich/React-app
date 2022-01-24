@@ -1,6 +1,6 @@
 import Skeleton from '@mui/material/Skeleton';
 
-  const LoopSkeleton = () => {
+export  const LoopSkeleton = () => {
         let content = [];
         for (let i = 0; i < 15; i++) {
             content.push(
@@ -11,4 +11,16 @@ import Skeleton from '@mui/material/Skeleton';
         }
         return content;
     }
-export default  LoopSkeleton
+
+    export  const CardLoopSkeleton = () => {
+        let content = [];
+        for (let i = 0; i < 1; i++) {
+            content.push(
+                <div className="nothingToShow">
+                    <Skeleton animation="pulse" variant="rectangular" width={600} height={400} style={{ 'borderRadius': '17px', 'margin': '10px' }} />
+                </div>
+            )
+        }
+        return content;
+    }
+

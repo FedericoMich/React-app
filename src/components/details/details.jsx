@@ -1,25 +1,22 @@
-import * as React from 'react';
-import { DateTime } from 'luxon';
+import { useRepos } from '../../hooks/useRepos'
+import { DetailsCard } from './detailscard';
+import {HeaderContent} from '../../components/content/headerContent'
+import{ CardLoopSkeleton }from '../content/loading';
 
 
-export const Details = (props) => {
 
-    const currentDate = props.value.creationDate
-    const lastUpdate = props.value.lastUpdate
-    const date = DateTime.fromISO(currentDate)
-    const humanReadableCreation = date.toLocaleString(DateTime.DATETIME_MED);
-    const date2 = DateTime.fromISO(lastUpdate)
-    const humanReadableUpdate = date2.toLocaleString(DateTime.DATETIME_MED);
-
+export const Details = () => {
+    const {repos, loading, handelUpdate} = useRepos();
+    const idPath = window.location.pathname.split('/').pop("=");
+    const fiteredDetails = (repos.filter((item) => item.idRepo == idPath))
+   
+   
     return (
         <>
-                {props.value.surname}
-                {props.value.name}
-                {props.value.login}
-                {props.value.repoName}
-                {Math.floor(Math.random() * 10)}
-                {humanReadableCreation}
-                {humanReadableUpdate}
+         <HeaderContent repos={repos} handelUpdate={handelUpdate} loading={loading}/>
+        {repos &&  !loading &&(<DetailsCard fiteredDetails={fiteredDetails}/>)}
+        {loading && <CardLoopSkeleton/>}
         </>
     );
 }
+

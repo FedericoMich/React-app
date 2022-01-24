@@ -26,9 +26,7 @@ export const TableContentRow = (props) => {
 
     const actions = [
         { icon: <FileCopyIcon />, name: 'Copy' },
-        { name: 'Dettagli', icon: <Link to={'/dettagli/'+ props.value.idRepo} value={props.value} ><ShareIcon/></Link>}
-    
-    ];
+        { name: 'Dettagli', icon:<Link to={'/dettagli/' + props.value.idRepo} value={props.value}><ShareIcon/></Link>}];
 
     const date = DateTime.fromISO(currentDate)
     const humanReadableCreation = date.toLocaleString(DateTime.DATETIME_MED);

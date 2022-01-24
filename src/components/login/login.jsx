@@ -6,7 +6,6 @@ import { FormControl, Input, InputLabel, FormHelperText } from '@mui/material';
 
 export const Login = () => {
     return <div>
-        <>
             <div>
                 <h2>Login</h2>
             </div>
@@ -19,8 +18,5 @@ export const Login = () => {
                     <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
                 </FormControl>
             </div>
-
-
-        </>
     </div>;
 };

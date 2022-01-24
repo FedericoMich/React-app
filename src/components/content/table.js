@@ -11,6 +11,8 @@ import Paper from '@mui/material/Paper';
 export function TableStudents(props) {
     const dataTable = props.listUser
 
+    console.log(dataTable)
+
     const myuser = dataTable.map((row) => (
         <TableContentRow value={row} key={row.idRepo} />
     ))

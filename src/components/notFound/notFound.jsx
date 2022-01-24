@@ -8,7 +8,7 @@ export const NotFound = () => {
                 <h2>Page not found</h2>
             </div>
             <div>
-                <Link to="/home"> back to home </Link>
+                <Link to="/"> back to home </Link>
             </div>
         </>
     ) 
