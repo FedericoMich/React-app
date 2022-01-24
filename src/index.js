@@ -11,6 +11,7 @@ import { ClassesPage } from './Pages/classes';
 import { UsersPage } from './Pages/users';
 import { LogoutPage } from './Pages/logout';
 import { LoginPages } from './Pages/login';
+import { DetailsPage } from './Pages/details';
 
 ReactDOM.render(
 
@@ -21,6 +22,7 @@ ReactDOM.render(
           <Route path="/repos" element={<ReposPage />} />
           <Route path="/classes" element={<ClassesPage />} />
           <Route path="/users" element={<UsersPage />} />
+          <Route path="/dettagli/:idRepo" element={<DetailsPage />} />
         </Route>
         <Route path="/logout" element={<LogoutPage />} />
         <Route path="/login" element={<LoginPages />} />

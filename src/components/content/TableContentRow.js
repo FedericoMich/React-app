@@ -13,21 +13,22 @@ import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
 import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
-import SaveIcon from '@mui/icons-material/Save';
-import PrintIcon from '@mui/icons-material/Print';
 import ShareIcon from '@mui/icons-material/Share';
+import { Link } from "react-router-dom";
 
-const actions = [
-    { icon: <FileCopyIcon />, name: 'Copy' },
-    { icon: <SaveIcon />, name: 'Save' },
-    { icon: <PrintIcon />, name: 'Print' },
-    { icon: <ShareIcon />, name: 'Share' },
-];
+
+
 
 
 export const TableContentRow = (props) => {
     const currentDate = props.value.creationDate
     const lastUpdate = props.value.lastUpdate
+
+    const actions = [
+        { icon: <FileCopyIcon />, name: 'Copy' },
+        { name: 'Dettagli', icon: <Link to={'/dettagli/'+ props.value.idRepo} value={props.value} ><ShareIcon/></Link>}
+    
+    ];
 
     const date = DateTime.fromISO(currentDate)
     const humanReadableCreation = date.toLocaleString(DateTime.DATETIME_MED);
