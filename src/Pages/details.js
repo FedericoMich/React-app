@@ -3,8 +3,7 @@ import { Details } from '../components/details/details'
 
 export const DetailsPage = () => {
     return (
-        <div>
-         <h1>Dettagli</h1>  
+        <div>  
         <Details/>
         </div>
     )

@@ -14,10 +14,10 @@ export  const LoopSkeleton = () => {
 
     export  const CardLoopSkeleton = () => {
         let content = [];
-        for (let i = 0; i < 1; i++) {
+        for (let i = 0; i < 2; i++) {
             content.push(
                 <div className="nothingToShow">
-                    <Skeleton animation="pulse" variant="rectangular" width={600} height={400} style={{ 'borderRadius': '17px', 'margin': '10px' }} />
+                    <Skeleton animation="pulse" variant="rectangular" width={500} height={200} style={{ 'borderRadius': '17px', 'margin': '10px' }} />
                 </div>
             )
         }

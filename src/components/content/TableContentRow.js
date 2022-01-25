@@ -12,8 +12,8 @@ import Backdrop from '@mui/material/Backdrop';
 import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
-import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
-import ShareIcon from '@mui/icons-material/Share';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import ReadMoreIcon from '@mui/icons-material/ReadMore';
 import { Link } from "react-router-dom";
 
 
@@ -25,8 +25,9 @@ export const TableContentRow = (props) => {
     const lastUpdate = props.value.lastUpdate
 
     const actions = [
-        { icon: <FileCopyIcon />, name: 'Copy' },
-        { name: 'Dettagli', icon:<Link to={'/dettagli/' + props.value.idRepo} value={props.value}><ShareIcon/></Link>}];
+        { value:'right',name: 'Dettagli', icon:<Link to={'/dettagli/' + props.value.idRepo} value={props.value}><ReadMoreIcon/></Link>},
+        {value:'right', name: 'GitHub', icon:<a href={`https://github.com/${props.value.login}/${props.value.repoName}`}><GitHubIcon/></a>}];
+
 
     const date = DateTime.fromISO(currentDate)
     const humanReadableCreation = date.toLocaleString(DateTime.DATETIME_MED);
@@ -68,7 +69,7 @@ export const TableContentRow = (props) => {
                                     <Backdrop open={openMore} />
                                     <SpeedDial
                                         ariaLabel="direction"
-                                        sx={{ position: 'absolute', bottom: 16, right: 16 }}
+                                        sx={{ position: 'absolute', bottom: 16, left: 10 }}
                                         icon={<SpeedDialIcon />}
                                         onClose={handleClose}
                                         onOpen={handleOpen}
@@ -80,6 +81,7 @@ export const TableContentRow = (props) => {
                                                 icon={action.icon}
                                                 tooltipTitle={action.name}
                                                 tooltipOpen
+                                                tooltipPlacement={'right'}
                                                 onClick={handleClose} />))}
 
                                     </SpeedDial>
