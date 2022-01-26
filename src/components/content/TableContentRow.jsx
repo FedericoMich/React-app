@@ -69,12 +69,12 @@ export const TableContentRow = (props) => {
                                     <Backdrop open={openMore} />
                                     <SpeedDial
                                         ariaLabel="direction"
-                                        sx={{ position: 'absolute', bottom: 16, left: 10 }}
+                                        sx={{ position: 'absolute', bottom: 6, left: 10 }}
                                         icon={<SpeedDialIcon />}
                                         onClose={handleClose}
                                         onOpen={handleOpen}
                                         open={openMore}
-                                    >
+                                        >
                                         {actions.map((action) => (
                                             <SpeedDialAction
                                                 key={action.name}

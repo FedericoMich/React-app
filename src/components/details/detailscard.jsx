@@ -18,7 +18,6 @@ export function DetailsCard(props) {
     const date2 = DateTime.fromISO(lastUpdate)
     const humanReadableUpdate = date2.toLocaleString(DateTime.DATETIME_MED);
 
-
     const card = (
         <React.Fragment>
             <CardContent>
@@ -27,12 +26,12 @@ export function DetailsCard(props) {
                 </Typography>
                 <Typography sx={{ mb: 1.5 }} color="text.secondary">
                     Data creazione:{humanReadableCreation}
-                    <br/>
+                    <br />
                     Ultimo aggiornamento:{humanReadableUpdate}
                 </Typography>
                 <Typography variant="body2">
                     Nome GitHub: {singleValues.login}
-                    <br/>
+                    <br />
                     Nome Repository: {singleValues.repoName}
                 </Typography>
             </CardContent>
@@ -44,11 +43,11 @@ export function DetailsCard(props) {
 
 
     return (
-       
-        <Box sx={{ minWidth: 275 }}>
-            <Card variant="outlined">{card}</Card>
-        </Box>
-       
+        <div className='detailsContainer'>
+            <Box sx={{ minWidth: 275, width: 600, height: 400, }}>
+                <Card variant="outlined">{card}</Card>
+            </Box>
+        </div>
     );
 }
 

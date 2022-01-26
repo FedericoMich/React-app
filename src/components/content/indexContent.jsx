@@ -4,8 +4,8 @@ import { TableStudents } from './table'
 import { useRepos } from '../../hooks/useRepos'
 import Divider from '@mui/material/Divider';
 import LogoBlack from '../../images/logoblack.png'
-import { HeaderContent } from './headerContent'
-import  {LoopSkeleton} from './loading'
+import { LoopSkeleton } from '../../layout/Loading/loading'
+import { HeaderContent } from '../HeaderContent/headerContent';
 
 export const IndexContent = () => {
     const {repos, loading, onError, handelUpdate} = useRepos();

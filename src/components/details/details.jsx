@@ -1,9 +1,9 @@
 import { useRepos } from '../../hooks/useRepos'
 import { DetailsCard } from './detailscard';
-import { HeaderContent } from '../../components/content/headerContent'
-import { CardLoopSkeleton } from '../content/loading';
+import { CardLoopSkeleton } from '../../layout/Loading/loading';
 import './details.css'
 import { useParams } from 'react-router-dom';
+import { RefreshBtn } from '../HeaderContent/RefreshBtn';
 
 
 
@@ -16,9 +16,11 @@ export const Details = () => {
 
     return (
         <div className="mainContainer">
-            <HeaderContent repos={fiteredDetails} handelUpdate={handelUpdate} loading={loading} />
+            <div className='buttonRefreshContainer'>
+                <RefreshBtn handelUpdate={handelUpdate} loading={loading} />
+            </div>
             {repos && !loading && (<DetailsCard fiteredDetails={fiteredDetails} />)}
-            {onError &&  !repos && <div className='errorContainer'><h1 class="error">Server Error</h1></div>}
+            {onError && !repos && <div className='errorContainer'><h1 class="error">Server Error</h1></div>}
             {loading && <CardLoopSkeleton />}
         </div>
     );
