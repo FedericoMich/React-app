@@ -22,7 +22,7 @@ ReactDOM.render(
           <Route path="/repos" element={<ReposPage />} />
           <Route path="/classes" element={<ClassesPage />} />
           <Route path="/users" element={<UsersPage />} />
-          <Route path="/dettagli/:idRepo" element={<DetailsPage />} />
+          <Route path="/dettagli/:login/:repoName" element={<DetailsPage />} />
         </Route>
         <Route path="/logout" element={<LogoutPage />} />
         <Route path="/login" element={<LoginPages />} />
@@ -34,7 +34,4 @@ ReactDOM.render(
   , document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

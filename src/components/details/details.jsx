@@ -1,28 +1,21 @@
-import { useRepos } from '../../hooks/useRepos'
 import { DetailsCard } from './detailscard';
 import { CardLoopSkeleton } from '../../layout/Loading/loading';
 import './details.css'
+import { useDetailRepos } from '../../hooks/useDetailsRepos';
 import { useParams } from 'react-router-dom';
-import { RefreshBtn } from '../HeaderContent/RefreshBtn';
 
 
 
 export const Details = () => {
-    const { idRepo } = useParams();
-    const { repos, loading, handelUpdate, onError } = useRepos();
-    const fiteredDetails = (repos.filter((item) => item.idRepo.toString() === idRepo))
+    const { login, repoName } = useParams();
+    const { detailRepos, loading, handelUpdate, onError } = useDetailRepos( login, repoName );
 
-
-
+  
     return (
         <div className="mainContainer">
-            <div className='buttonRefreshContainer'>
-                <RefreshBtn handelUpdate={handelUpdate} loading={loading} />
-            </div>
-            {repos && !loading && (<DetailsCard fiteredDetails={fiteredDetails} />)}
-            {onError && !repos && <div className='errorContainer'><h1 class="error">Server Error</h1></div>}
+            {detailRepos && !loading && (<DetailsCard detailRepos={detailRepos} handelUpdate={handelUpdate} loading={loading} />)}
+            {onError && !detailRepos && <div className='errorContainer'><h1 class="error">Server Error</h1></div>}
             {loading && <CardLoopSkeleton />}
         </div>
     );
 }
-

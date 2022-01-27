@@ -19,11 +19,22 @@ import "./head.css"
 import { Link } from "react-router-dom";
 
 
-const pages = ['Visualizza repos', 'Nuovo utente ', <Link to="/repos">Repos</Link>];
-const settings = [<Link to="/logout">logout</Link>, <Link to="/login">Login</Link>, <Link to="/users">Users</Link>,  <Link to="/classes">Classes</Link>];
-                           
-                           
-                          
+const pages = [
+    { id: 1, action: 'Visualizza repos'},
+    { id: 2, action: 'Nuovo utente '},
+    { id: 3, action: <Link to="/repos">Repos</Link> }
+
+];
+
+const settings = [
+    { id: 1, action: <Link to="/logout">logout</Link>},
+    { id: 2, action: <Link to="/login">Login</Link>},
+    { id: 3, action: <Link to="/users">Users</Link>},
+    { id: 4, action: <Link to="/classes">Classes</Link>}
+];
+
+
+
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -130,8 +141,8 @@ export const Head = () => {
                                 onClose={handleCloseNavMenu}
                                 sx={{ display: { xs: 'block', md: 'none' }, }}>
                                 {pages.map((page) => (
-                                    <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                        <Typography textAlign="center">{page}</Typography>
+                                    <MenuItem key={page.id} onClick={handleCloseNavMenu}>
+                                        <Typography textAlign="center">{page.action}</Typography>
                                     </MenuItem>))}
                                 <Search>
                                     <SearchIconWrapper>
@@ -156,10 +167,10 @@ export const Head = () => {
                             <div className="navbarButtonContainer">
                                 {pages.map((page) => (
                                     <Button
-                                        key={page}
+                                        key={page.id}
                                         onClick={handleCloseNavMenu}
                                         sx={{ my: 2, color: 'white', display: 'block' }}>
-                                        {page}
+                                        {page.action}
                                     </Button>
 
                                 ))}
@@ -199,8 +210,8 @@ export const Head = () => {
                                 open={Boolean(anchorElUser)}
                                 onClose={handleCloseUserMenu}>
                                 {settings.map((setting) => (
-                                    <MenuItem key={setting} onClick={handleCloseNavMenu}>
-                                        <Typography textAlign="center">{setting}</Typography>
+                                    <MenuItem key={setting.id} onClick={handleCloseNavMenu}>
+                                        <Typography textAlign="center">{setting.action}</Typography>
                                     </MenuItem>
                                 ))}
                             </Menu>
