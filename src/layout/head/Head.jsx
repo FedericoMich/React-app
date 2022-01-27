@@ -16,21 +16,23 @@ import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import "./head.css"
+import avatarImg from '../../images/avatar.jpg'
 import { Link } from "react-router-dom";
 
 
+
 const pages = [
-    { id: 1, action: 'Visualizza repos'},
-    { id: 2, action: 'Nuovo utente '},
+    { id: 1, action: 'Visualizza repos' },
+    { id: 2, action: 'Nuovo utente ' },
     { id: 3, action: <Link to="/repos">Repos</Link> }
 
 ];
 
 const settings = [
-    { id: 1, action: <Link to="/logout">logout</Link>},
-    { id: 2, action: <Link to="/login">Login</Link>},
-    { id: 3, action: <Link to="/users">Users</Link>},
-    { id: 4, action: <Link to="/classes">Classes</Link>}
+    { id: 1, action: <Link to="/logout">logout</Link> },
+    { id: 2, action: <Link to="/login">Login</Link> },
+    { id: 3, action: <Link to="/users">Users</Link> },
+    { id: 4, action: <Link to="/classes">Classes</Link> }
 ];
 
 
@@ -191,7 +193,7 @@ export const Head = () => {
                         <Box sx={{ flexGrow: 0 }}>
                             <Tooltip title="Open settings">
                                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                    <Avatar alt="F" src="/static/images/avatar/1.jpg" />
+                                <Avatar alt="Remy Sharp"  src={avatarImg} />
                                 </IconButton>
                             </Tooltip>
                             <Menu
