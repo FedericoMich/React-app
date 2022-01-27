@@ -14,8 +14,6 @@ export function TableStudents(props) {
         <TableContentRow value={row} key={row.idRepo} />
     ))
      
-    console.log(myuser)
-    
     return (
         <div className='tableContainer'>
             <TableContainer component={Paper}>
