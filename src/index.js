@@ -18,14 +18,14 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
+      <Route path="/" element={<LoginPages />} />
         <Route path="/" element={<App />} >
-          <Route path="/repos" element={<ReposPage />} />
+          <Route path="/repos/*" element={<ReposPage />}/>
           <Route path="/classes" element={<ClassesPage />} />
           <Route path="/users" element={<UsersPage />} />
           <Route path="/dettagli/:login/:repoName" element={<DetailsPage />} />
         </Route>
         <Route path="/logout" element={<LogoutPage />} />
-        <Route path="/login" element={<LoginPages />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

@@ -17,6 +17,5 @@ body{
 .App {
   font-family: var(--mainFont) !important;
   background-color: var(--color3);
-  color: whitesmoke;
   padding-bottom: 8rem;
 }

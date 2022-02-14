@@ -3,9 +3,9 @@ import { User } from '../components/users/user';
 
 
 export const UsersPage = () => {
-    return(
-    <div>
-        <User/>
-    </div>
+    return (
+        <div>
+            <User />
+        </div>
     )
 };

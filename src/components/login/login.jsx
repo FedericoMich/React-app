@@ -1,22 +1,26 @@
-import React from 'react';
+import './login.css'
 import { Link } from "react-router-dom";
-import { FormControl, Input, InputLabel, FormHelperText } from '@mui/material';
+import logo from "../../images/logowhite.png"
+
 
 
 
 export const Login = () => {
-    return <div>
-            <div>
-                <h2>Login</h2>
+
+
+    return (
+        <div className="loginContainer">
+            <div className="loginform">
+                <div className="loginImgContainer">
+                    <img className="loginImg" src={logo} alt="logo" />
+                </div>
+                <input className="loginInput" type="text" placeholder="Username" />
+                <input className="loginInput" type="text" placeholder="Password" />
+                <Link to="/repos"><button class="bn632-hover bn28">Login</button></Link>
+                <div className="shape1"></div>
+                <div className="shape2"></div>
             </div>
-            <div>
-                <Link to="/">torna alla home</Link>
-                <br></br>
-                <FormControl>
-                    <InputLabel htmlFor="my-input">Email address</InputLabel>
-                    <Input id="my-input" aria-describedby="my-helper-text" />
-                    <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
-                </FormControl>
-            </div>
-    </div>;
+        </div>
+    )
 };
+
