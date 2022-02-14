@@ -17,8 +17,6 @@ export const Login = () => {
                 <input className="loginInput" type="text" placeholder="Username" />
                 <input className="loginInput" type="text" placeholder="Password" />
                 <Link to="/repos"><button class="bn632-hover bn28">Login</button></Link>
-                <div className="shape1"></div>
-                <div className="shape2"></div>
             </div>
         </div>
     )
