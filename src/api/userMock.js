@@ -2,7 +2,7 @@ export const students = [
         {
             "username": "Federico",
             "email": "mich@gmail.com",
-            "session": false
+            "session": true
         },
         {
             "username": "Germano",

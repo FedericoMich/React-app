@@ -10,7 +10,7 @@ import { useSearchParams } from 'react-router-dom';
 
 
 export const IndexContent = () => {
-    const { repos, loading, onError, handelUpdate, setUser } = useRepos();
+    const { repos, loading, onError, handelUpdate } = useRepos();
 
     const [SearchParams] = useSearchParams();
     const toFilter = SearchParams.get("surname")
@@ -23,7 +23,7 @@ export const IndexContent = () => {
     return (
         <div className="mainContainer">
             <HeaderContent repos={repos} handelUpdate={handelUpdate} loading={loading} />
-            <button onClick={() => setUser(false)}>logout </button>
+            {/*<button onClick={() => setUser(false)}>logout </button>*/}
             {loading && <LoopSkeleton />}
             {repos && !loading && (<TableStudents listUser={toFilter === null ? repos : result} />)}
             {onError && !repos && <div className='errorContainer'><h1 class="error">Server Error</h1></div>}
