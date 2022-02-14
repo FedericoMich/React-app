@@ -17,15 +17,13 @@ import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import "./head.css"
 import avatarImg from '../../images/avatar.jpg'
-import { Link } from "react-router-dom";
+import { Link,  useSearchParams } from "react-router-dom";
 
 
 
 const pages = [
-    { id: 1, action: 'Visualizza repos' },
-    { id: 2, action: 'Nuovo utente ' },
-    { id: 3, action: <Link to="/repos">Repos</Link> }
-
+    { id: 1, action: <Link to="/repos">Visualizza repos</Link> },
+    { id: 2, action: 'Nuovo utente ' }
 ];
 
 const settings = [
@@ -81,6 +79,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 
 export const Head = () => {
+    let [, setSearchParams] = useSearchParams();
+
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -100,8 +100,12 @@ export const Head = () => {
     };
 
     function onChange(e) {
-        const change = (e.target.value)
-        console.log(change)
+        const surname = (e.target.value)
+        if (surname) {
+            setSearchParams({ surname });
+          } else {
+            setSearchParams({});
+          }
     }
 
     return (

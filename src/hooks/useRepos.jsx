@@ -1,11 +1,17 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { listRepos } from "../api/repos"
+import { useNavigate } from "react-router-dom";
+import { User } from "../context/UserContext";
+
 
 
 export const useRepos = () => {
     const [repos, setRepos] = useState([]);
     const [loading, setLoading] = useState(true)
     const [onError, setOnError] = useState(false);
+    const { user, setUser } = useContext(User);
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         const populate = async () => {
@@ -20,6 +26,19 @@ export const useRepos = () => {
         populate()
     }, [])
 
+
+    useEffect(() => {
+        const isAuth = () => {
+            if (user[0].session === false) {
+                navigate("/")
+                console.log("redirect OK")
+            }
+        }
+        isAuth();
+    }, [navigate, user]);
+
+
+
     const handelUpdate = async () => {
         setLoading(true)
         try {
@@ -31,6 +50,6 @@ export const useRepos = () => {
         }
     }
 
-  
-    return { repos, loading, onError, handelUpdate };
+    
+    return { repos, loading, onError, handelUpdate, setUser };
 }
