@@ -17,3 +17,8 @@
     margin: 0rem 1.5rem;
     font-family: var(--mainFont);
 }
+
+.username{
+    padding: 15px;
+    margin: 0!important;
+}

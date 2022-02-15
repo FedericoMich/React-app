@@ -17,21 +17,11 @@ import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import "./head.css"
 import avatarImg from '../../images/avatar.jpg'
-import { Link,  useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
+import LogoutIcon from '@mui/icons-material/Logout';
+import { User } from '../../context/UserContext';
+import { useContext } from 'react';
 
-
-
-const pages = [
-    { id: 1, action: <Link to="/repos">Visualizza repos</Link> },
-    { id: 2, action: 'Nuovo utente ' }
-];
-
-const settings = [
-    { id: 1, action: <Link to="/logout">logout</Link> },
-    { id: 2, action: <Link to="/login">Login</Link> },
-    { id: 3, action: <Link to="/users">Users</Link> },
-    { id: 4, action: <Link to="/classes">Classes</Link> }
-];
 
 
 
@@ -103,10 +93,25 @@ export const Head = () => {
         const surname = (e.target.value)
         if (surname) {
             setSearchParams({ surname });
-          } else {
+        } else {
             setSearchParams({});
-          }
+        }
     }
+
+    const { setLog } = useContext(User);
+
+
+    const pages = [
+        { id: 1, action: <Link to="/repos">Visualizza repos</Link> },
+        { id: 2, action: 'Nuovo utente ' }
+    ];
+
+    const settings = [
+
+        { id: 1, action: <Link to="/users">Users</Link> },
+        { id: 2, action: <Link to="/classes">Classes</Link> },
+        { id: 3, action: <Link onClick={() => setLog(false)} to="/logout"><LogoutIcon /> Logout</Link> }
+    ];
 
     return (
 
@@ -194,10 +199,12 @@ export const Head = () => {
                             </div>
 
                         </Box>
+                        <button onClick={() => setLog(false)}>esci </button>
+                        <p className='username'> Ciao: {User._currentValue2[0].username}</p>
                         <Box sx={{ flexGrow: 0 }}>
                             <Tooltip title="Open settings">
                                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar alt="Remy Sharp"  src={avatarImg} />
+                                    <Avatar alt="img" src={avatarImg} />
                                 </IconButton>
                             </Tooltip>
                             <Menu

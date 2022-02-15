@@ -1,12 +1,12 @@
-export const students = [
+export const Students = [
         {
             "username": "Federico",
             "email": "mich@gmail.com",
             "session": true
         },
         {
-            "username": "Germano",
-            "email": "germano@gmail.com",
-            "session": false
+            "username": "Luca",
+            "email": "luca@gmail.com",
+            "session": true
         }
     ]

@@ -15,7 +15,7 @@ export const IndexContent = () => {
     const [SearchParams] = useSearchParams();
     const toFilter = SearchParams.get("surname")
 
-    const result = repos.filter(surname => {
+    const filteredRepos = repos.filter(surname => {
         return surname.surname.toLowerCase().includes(toFilter)
     })
 
@@ -23,9 +23,8 @@ export const IndexContent = () => {
     return (
         <div className="mainContainer">
             <HeaderContent repos={repos} handelUpdate={handelUpdate} loading={loading} />
-            {/*<button onClick={() => setUser(false)}>logout </button>*/}
             {loading && <LoopSkeleton />}
-            {repos && !loading && (<TableStudents listUser={toFilter === null ? repos : result} />)}
+            {repos && !loading && (<TableStudents listUser={toFilter === null ? repos : filteredRepos} />)}
             {onError && !repos && <div className='errorContainer'><h1 class="error">Server Error</h1></div>}
             {<Divider><img className="LogoGitClassDivider" alt="LogoGitClass" src={LogoBlack} /></Divider>}
         </div>

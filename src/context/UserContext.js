@@ -1,10 +1,5 @@
 import { createContext } from "react";
-import { students } from "../api/userMock";
+import { Students } from "../api/userMock";
 
 
-export const User = createContext(
-  {
-    students,
-    setStudent: () => {}
-  }
-);
+export const User = createContext(Students);

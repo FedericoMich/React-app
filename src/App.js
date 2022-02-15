@@ -2,16 +2,17 @@ import React, { useState } from 'react'
 import { Outlet } from "react-router-dom";
 import { Head } from './layout/head/Head'
 import { User } from "./context/UserContext";
-import { students } from "./api/userMock";
-
 import './App.css';
 
 
-
 function App() {
-  const [user, setUser]= useState(students)
-  const value = { user, setUser };
- 
+
+  
+  const [log, setLog] = useState(User._currentValue2[0].session)
+  const value = { log, setLog };
+
+  console.log("Log = " + log);
+
   return (
     <User.Provider value={value}>
       <div className="App">

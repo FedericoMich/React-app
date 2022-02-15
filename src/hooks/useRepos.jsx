@@ -9,7 +9,7 @@ export const useRepos = () => {
     const [repos, setRepos] = useState([]);
     const [loading, setLoading] = useState(true)
     const [onError, setOnError] = useState(false);
-    const { user, setUser } = useContext(User);
+    const { log } = useContext(User);
 
     const navigate = useNavigate();
 
@@ -29,13 +29,13 @@ export const useRepos = () => {
 
     useEffect(() => {
         const isAuth = () => {
-            if (user[0].session === false) {
+            if (log !== true) {
                 navigate("/")
                 console.log("redirect OK")
             }
         }
         isAuth();
-    }, [navigate, user]);
+    }, [navigate, log]);
 
 
 
@@ -51,5 +51,5 @@ export const useRepos = () => {
     }
 
     
-    return { repos, loading, onError, handelUpdate, setUser };
+    return { repos, loading, onError, handelUpdate};
 }

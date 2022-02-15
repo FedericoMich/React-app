@@ -16,10 +16,10 @@ export const HeaderContent = (props) => {
                         <RefreshBtn handelUpdate={props.handelUpdate} />
                     </Grid>
                     <Grid item xs>
-                        <DropdownFilter />
+                        <h4 className="total">Totale repos: {!props.loading ? (props.repos.length) : <CircularProgress color="inherit" />}</h4>
                     </Grid>
                     <Grid item xs>
-                        <h4 className="total">Totale repos: {!props.loading ? (props.repos.length) : <CircularProgress color="inherit" />}</h4>
+                        <DropdownFilter />
                     </Grid>
                 </Grid>
             </Box>

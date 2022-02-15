@@ -2,9 +2,6 @@ import './login.css'
 import { Link } from "react-router-dom";
 import logo from "../../images/logowhite.png"
 
-
-
-
 export const Login = () => {
 
 
