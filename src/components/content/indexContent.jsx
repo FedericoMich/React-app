@@ -11,8 +11,8 @@ import { useSearchParams } from 'react-router-dom';
 
 export const IndexContent = () => {
     const { repos, loading, onError, handelUpdate } = useRepos();
-
     const [SearchParams] = useSearchParams();
+    
     const toFilter = SearchParams.get("surname")
 
     const filteredRepos = repos.filter(surname => {

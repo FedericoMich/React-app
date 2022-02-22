@@ -107,10 +107,9 @@ export const Head = () => {
     ];
 
     const settings = [
-
         { id: 1, action: <Link to="/users">Users</Link> },
         { id: 2, action: <Link to="/classes">Classes</Link> },
-        { id: 3, action: <Link onClick={() => setLog(false)} to="/logout"><LogoutIcon /> Logout</Link> }
+        { id: 3, action:  <button onClick={() => setLog(false)}>esci <LogoutIcon /> </button> }
     ];
 
     return (
@@ -199,7 +198,7 @@ export const Head = () => {
                             </div>
 
                         </Box>
-                        <button onClick={() => setLog(false)}>esci </button>
+                       
                         <p className='username'> Ciao: {User._currentValue2[0].username}</p>
                         <Box sx={{ flexGrow: 0 }}>
                             <Tooltip title="Open settings">

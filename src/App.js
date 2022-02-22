@@ -8,7 +8,7 @@ import './App.css';
 function App() {
 
   
-  const [log, setLog] = useState(User._currentValue2[0].session)
+  const [log, setLog] = useState(true)
   const value = { log, setLog };
 
   console.log("Log = " + log);
