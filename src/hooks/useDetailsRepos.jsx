@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from 'react'
-import { listDetailRepos } from "../api/detailRepos"
+import { listDetailRepos } from "../api/apiRepos"
 import { useNavigate } from "react-router-dom";
 import { User } from "../context/UserContext";
 
