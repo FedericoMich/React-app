@@ -7,14 +7,15 @@ import LogoBlack from '../../images/logoblack.png'
 import { LoopSkeleton } from '../../layout/Loading/loading'
 import { HeaderContent } from '../HeaderContent/headerContent';
 import { useSearchParams } from 'react-router-dom';
+import { useAuth } from '../../hooks/useAuth';
 
 
 export const IndexContent = () => {
+    useAuth();
     const { repos, loading, onError, handelUpdate } = useRepos();
     const [SearchParams] = useSearchParams();
     
     const toFilter = SearchParams.get("surname")
-
     const filteredRepos = repos.filter(surname => {
         return surname.surname.toLowerCase().includes(toFilter)
     })

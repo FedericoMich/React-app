@@ -1,29 +1,12 @@
-import { useState, useEffect, useContext } from 'react'
+import { useState, useEffect } from 'react'
 import { listDetailRepos } from "../api/apiRepos"
-import { useNavigate } from "react-router-dom";
-import { User } from "../context/UserContext";
+
 
 
 export const useDetailRepos = ( login, repoName ) => {
     const [detailRepos, setDetailRepos] = useState([]);
     const [loading, setLoading] = useState(true)
     const [onError, setOnError] = useState(false);
-    const { log } = useContext(User);
-
-    const navigate = useNavigate();
-
-
-    useEffect(() => {
-        const isAuth = () => {
-            if (log !== true) {
-                navigate("/")
-                console.log("redirect OK")
-            }
-        }
-        isAuth();
-    }, [navigate, log]);
-
-
 
     useEffect(() => {
         const populate = async () => {
