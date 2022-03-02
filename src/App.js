@@ -2,16 +2,15 @@ import React, { useState } from 'react'
 import { Outlet } from "react-router-dom";
 import { Head } from './layout/head/Head'
 import { User } from "./context/UserContext";
+import { getSession } from './context/getSession';
 import './App.css';
 
 
 function App() {
 
   
-  const [log, setLog] = useState(true)
+  const [log, setLog] = useState(getSession())
   const value = { log, setLog };
-
-  console.log("Log = " + log);
 
   return (
     <User.Provider value={value}>

@@ -199,7 +199,7 @@ export const Head = () => {
 
                         </Box>
                        
-                        <p className='username'> Ciao: {User._currentValue2[0].username}</p>
+                        <p className='username'> Ciao: {User._currentValue2.username}</p>
                         <Box sx={{ flexGrow: 0 }}>
                             <Tooltip title="Open settings">
                                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

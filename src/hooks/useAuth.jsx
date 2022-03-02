@@ -4,17 +4,13 @@ import { User } from "../context/UserContext";
 
 
 export const useAuth = () => {
-
     const { log } = useContext(User);
-
     const navigate = useNavigate();
-
 
     useEffect(() => {
         const isAuth = () => {
-            if (log !== true) {
+            if (log.session !== true) {
                 navigate("/")
-                console.log("redirect OK")
             }
         }
         isAuth();
