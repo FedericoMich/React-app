@@ -28,7 +28,6 @@ describe('Formattazione delle date', () => {
     });
 
 
-
     it('inviare come data null', () => {
         const mydate = null;
         expect(() => formatDate(mydate)).toThrow()
